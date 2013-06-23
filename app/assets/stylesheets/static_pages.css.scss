@@ -4,14 +4,46 @@
 
 .modal-content {
     float: left;
-    width: 75%;
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+}
+
+.modal-sidebar-wrapper {
+    float: right;
+    padding: 10px;
+    width: 20%;
+    white-space: normal;
 }
 
 .modal-sidebar {
-    float: right;
-    width: 25%;
-    border-left: 2px;
-    border-color: black;
+    white-space: normal;
+    position: fixed;
+    width: 12%;
+}
+
+.stick {
+    position:fixed;
+    top:160px;
+}
+
+#CYDModal {
+  width: 800px;
+  max-height: 400px;
+  margin-left: -375px !important;
+  .modal-body{
+    max-height: 250px;
+    padding: 0 0 0 15px;
+  }
+}
+
+.hero-unit{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#pagenumber {
+  text-align: center;
 }
 
 #book {
