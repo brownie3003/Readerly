@@ -1,0 +1,80 @@
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Bestsellers you will love. Almost free.</h1>
+        <p>
+       	<br />
+        1. Sample one of our featured books.</br>
+        2. Recommend it to your friends.</br>
+        3. Get your book for <strong>99p.</strong>.</br>
+        </p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->    
+        <div class="span6" id="book">
+          <h2 align="Center">Life! Death! Prizes!</h2>
+          <div class="row-fluid">
+            <div class="span4">
+              <img class="bookcover" src="images/ldp.jpg"></img>
+            </div>
+            <div class="span8">
+              <p class="synopsis">Billy's Mum is dead. He knows - because he reads about it in magazines - that people die every day in ways that are more random and tragic and stupid than hers, but for nineteen-year-old Billy and his little brother, Oscar, their mother's death</p>
+            </div>
+          </div>
+            <a href="#TGModal" role="button" class="btn" data-toggle="modal">Read Sample</a>
+        </div>
+        
+        <div class="span6" id="book">
+          <h2 align="Center">Catch Your Death</h2>
+          <div class="row-fluid">
+            <div class="span4">
+              <%= image_tag('cyd.jpg', class: "bookcover") %>
+            </div>
+            <div class="span8">
+              <p class="synopsis">Twenty years ago, Kate Maddox was a volunteer at a research centre where scientists hunted for a cure for the common cold virus. That summer, Kate fell in love with a handsome young doctor, Stephen, but her stay ended in his tragic death and Kate fled</p>
+            </div>
+          </div>
+            <div>
+              <a href="#CYDModal" role="button" class="btn" data-toggle="modal">Read Sample</a>
+            </div>
+        </div>
+        
+        <div id="CYDModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3 id="myModalLabel">Catch Your Death</h3><h4> by Louise Voss and Mark Edwards</h4>
+          </div>
+          <div class="modal-body" id="samplebody">
+            <div class="modal-content">
+              Testing
+                </br>
+                </br>
+                </br>
+                </br>
+                What the fuck
+            </div>
+            <div class="modal-sidebar">
+              Sidebar?
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row-fluid">
+              <div class="span1">
+                <button id="CYDbkwd" class="btn btn-primary"><</button>
+              </div>
+              <div id="pagenumber" class="span10">
+                <!-- Declare page one due to my jQuery inadequacy of changing a variable-->
+                <p id=page1>Page 1</p>
+              </div>
+              <div class="span1">
+                <button id="CYDfwd" class="btn btn-primary">></button>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+      </div>
