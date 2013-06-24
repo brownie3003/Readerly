@@ -1,16 +1,14 @@
-    <div class="container">
-
-        <!-- Main hero unit for a primary marketing message or call to action -->
-        <div class="hero-unit">
-            <h1>Bestsellers you will love. Almost free.</h1>
-            <p>
-       	    <br />
-            1. Sample one of our featured books.</br>
-            2. Recommend it to your friends.</br>
-            3. Get your book for <strong>99p.</strong></br>
-            </p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-        </div>
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div id="hero">
+    <h1>Bestsellers you will love. Almost free.</h1>
+    <p>
+        <br />
+        1. Sample one of our featured books.</br>
+        2. Recommend it to your friends.</br>
+        3. Get your book for <strong>99p.</strong></br>
+    </p>
+    <p><%= link_to "Get Reading", '#', class: "btn btn-large btn-primary" %></p>
+</div>
 
         <div class="span6" id="book">
             <h2 align="Center">Gone Baby Gone</h2>
@@ -18,11 +16,11 @@
                 <div class="span4">
                     <%= image_tag('GBG.jpg', class: "bookcover") %>
                 </div>
-                <div class="span8">
-                    <%= render "gbgsynopsis" %>
+                <div class="span8 synopsis">
+                    <%= @books.find(1).synopsis %>
                 </div>
             </div>
-            <a href="#GBGModal" role="button" class="btn" data-toggle="modal">Read Sample</a>
+            <%= link_to "Read Sample", book_path(@books.find(1)), class: "btn" %>
         </div>
                 
         <div class="span6" id="book">
@@ -40,4 +38,3 @@
             </div>
         </div>          
     </div>
-</div>

@@ -1,15 +1,15 @@
- <div class="container">
-        <h3 class="muted">Readerly</h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
-</div>
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <%= link_to "Readerly", root_path, id: "logo" %>
+            <nav>
+                <ul class="nav pull-right">
+                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "Books", books_path %></li>
+                    <li><%= link_to "About", '#' %></li>
+                    <li><%= link_to "Contact", '#' %></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
