@@ -1,7 +1,7 @@
 Readerly::Application.routes.draw do
   resources :books do
-    collection do
-      match 'books#recommend'
+    member do
+      get 'recommend'
     end
   end
 
