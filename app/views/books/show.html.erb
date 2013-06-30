@@ -5,9 +5,13 @@
 	</div>
 	<div class="sidebar-wrapper">
 	    <div class="sidebar">
-	    	<h4> <a href="mailto:?bcc=test@readerly.io&subject=Catch%20Your%20Death&body=Hi%20, I've%20just%20started%20reading%20Catch%20Your%20Death%20on%20Readerly.com%20.%20You%20should%20check%20it%20out."> Recommend <%= @book.title %> </a></h4>
-        	<p>Download PDF sample</p>
+	    	<h4> You are reading <%= @book.title %> by <%= @book.author %> </h4>
+	    	<%= link_to "Recommend", '#', class: "btn btn-primary" %>
+        	<%= link_to "Download PDF", '#', class: "btn btn-primary" %>
+        	<%= link_to "Buy", '#', class: "btn btn-warning" %>
         	
     	</div>
 	</div>
 </div>
+
+<p> <a href="<%= "mailto:?bcc=test@readerly.io&subject= Book recommendation - " + @book.title  + "&body=Hi, I've just started reading " + @book.title + " on Readerly.com. I thought you might enjoy it." %>"> Recommend to friend and get the book for 99p</a></p>

@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body {
-  padding-top: 30px;
+  padding-top: 38px;
   background-color: #ecf0f1 !important;
 }
 
@@ -11,7 +11,7 @@ body {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #666;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -19,6 +19,7 @@ body {
   &:hover {
     color: white;
     text-decoration: none;
+    background-color: transparent;
   }
 }
 
@@ -29,29 +30,29 @@ body {
 }
 
 #bookcase-background {
-	height: 480px;
-	background-image: url("bookshelf-background.png");
-	background-position: right 44px top -5px; 
-	padding-top: 60px;
+	height: 440px;
+	background-image: url(image_path("bookshelf-background.png"));
+	background-position: right 44px top -45px; 
+	padding-top: 30px;
 }
 
 #heroic {
 	
-	height: 300px;
+	height: 290px;
 	width: 600px;
 	background-image: url("heroBack.png");
 	border-radius: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	h1 {
-	padding-top: 40px;
+	padding-top: 30px;
 	text-align: center;
 	color: white;
 	}
 	p {
 		margin-left: auto;
 		margin-right: auto;
-		width: 60%;
+		width: 52%;
 		color: white;
 		font-size: 15px;
 		font-weight: bolder;
@@ -60,6 +61,7 @@ body {
 		margin: 0 auto;
 		display: block;
 		width: 150px;
+		color: white;
 	}
 }
 
@@ -94,6 +96,26 @@ body {
 	white-space: normal;
     position: fixed;
     width: 12%;
+    h4 {
+    	text-align: center;
+    }
+    a {
+    	text-align: center;
+    	&:hover {
+    		background-color: transparent;
+    		text-decoration: none;
+    		color: blue;
+    	}
+    }
+    .btn {
+			margin: 0 auto;
+			margin-bottom: 4px;
+			display: block;
+			color: white;
+			&:hover {
+				background-color: transparent !important; /* Some effect on buttons */
+			}
+		}
 }
 
 .synopsis {
