@@ -33,18 +33,18 @@
     </div>
         
     <div class="span6">
-       <h2 align="Center"><%= @books.find(4).title %></h2>
+       <h2 align="Center"><%= @books.find(2).title %></h2>
        <div class="row-fluid">
            <div class="span4">
                <%= image_tag('GBG.jpg', class: "bookcover") %>
            </div>
            <div class="span8">
                 <p class="synopsis">
-                    <%= @books.find(4).synopsis %>
+                    <%= @books.find(2).synopsis %>
                 </p>
             </div>
         </div>
         <div>
-            <%= link_to "Read Sample", book_path(@books.find(4)), class: "btn" %>
+            <%= link_to "Read Sample", book_path(@books.find(2)), class: "btn" %>
         </div>
     </div> 
