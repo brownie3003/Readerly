@@ -24,7 +24,7 @@
                 <%= image_tag('GG.jpg', class: "bookcover") %>
             </div>
             <div class="span8 synopsis">
-                <%= @books.find(1).synopsis %>
+                <%= @books.find(1).synopsis.html_safe %>
             </div>
         </div>
         <div style="padding-top: 10px;">
