@@ -5,6 +5,13 @@ body {
   background-color: #ecf0f1 !important;
 }
 
+hr {
+	height: 20px;
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* header */
 
 #logo {
@@ -83,6 +90,12 @@ body {
     h2 {
     	text-align: center;
     }
+    .btn {
+    	margin: 0 auto;
+    	display: block;
+    	width: 30%;
+    	color: white;
+    }
 }
 
 .sidebar-wrapper {
@@ -93,29 +106,17 @@ body {
 }
 
 .sidebar {
-	white-space: normal;
     position: fixed;
     width: 12%;
     h4 {
     	text-align: center;
     }
-    a {
-    	text-align: center;
-    	&:hover {
-    		background-color: transparent;
-    		text-decoration: none;
-    		color: blue;
-    	}
-    }
     .btn {
-			margin: 0 auto;
-			margin-bottom: 4px;
-			display: block;
-			color: white;
-			&:hover {
-				background-color: transparent !important; /* Some effect on buttons */
-			}
-		}
+		margin: 0 auto;
+		margin-bottom: 4px;
+		display: block;
+		color: white;
+	}
 }
 
 .synopsis {
