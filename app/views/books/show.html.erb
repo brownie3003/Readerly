@@ -4,8 +4,8 @@
 	    <%= @book.chapters.html_safe %>
 	    <hr>
 	    <div>
-	    	<p>You have been reading a sample from <%= @book.title %> by <%= @book.author %>.</p>
-	    	<p>If you would like to buy the eBook version for 99p simply recommend it to two people by clicking recommend.</p>
+	    	<p><em>You have been reading a sample from <%= @book.title %> by <%= @book.author %>.</p>
+	    	<p>If you would like to buy the eBook version for 99p simply recommend it to two people by clicking recommend.</em></p>
 	    	<%= link_to "Recommend", recommend_book_path, class: "btn btn-primary" %>
 	    </div>
 	</div>
