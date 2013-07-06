@@ -1,0 +1,23 @@
+<div class="recommendation">
+	<%= form_tag("/books/#{params[:id]}/recommend") do %>
+		Name:<%= text_field_tag 'name' %>
+		Email:<%= email_field_tag 'userEmail', nil, placeholder: "Provide your email address" %>
+		Recommend to:<%= text_field_tag 'emails', nil, placeholder: "Enter emails separate by ," %>
+		<%= submit_tag 'Recommend' %>
+	<% end %>
+
+
+	<%= mail_to "", "Recommend", bcc: "recommend@readerly.io", subject: "Check out #{@book.title} by #{@book.author}", body: "Hi, \n\n I'm currently reading #{@book.title} on Readerly.io.", class: "btn btn-primary" %>
+	<ol>
+		<li>During beta recommendations can only be made through email.</li>
+		<li>You must send a copy of the email to us at recommmend@readerly.io in order for our system to track recommendations</li>
+		<li>Clicking <strong> Recommend </strong> will open an email with a basic recommendation and our email address in the bcc field.</li>
+		<li>Feel free to customise the recommendation.</li>
+		<li>Within an hour we will email you the discount code to buy <%= @book.title %> from our store.</li>
+	</ol>
+
+	<%= mail_to "", "Recommend", bcc: "recommend@readerly.io", subject: "Check out #{@book.title} by #{@book.author}", body: "Hi, \n\n I'm currently reading #{@book.title} on http://www.readerly.io.", class: "btn btn-primary" %>
+	<%= link_to "Return to Book", book_path, class: "btn btn-primary" %>
+
+
+</div>

@@ -44,6 +44,11 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  # POST /books/:id/recommend
+  def recommended
+    RecommendMailer.recommendation_email(params).deliver
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book

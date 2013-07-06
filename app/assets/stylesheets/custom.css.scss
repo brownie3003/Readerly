@@ -125,3 +125,18 @@ hr {
 	height: 225px;
 	overflow-y: scroll;
 }
+
+/* Recommendation */
+
+.recommendation {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 680px;
+	.btn {
+		width: 20%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		display: block;
+		color: white;
+	}
+}

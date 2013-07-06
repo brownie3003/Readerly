@@ -1,7 +1,8 @@
 Readerly::Application.routes.draw do
   resources :books do
     member do
-      get 'recommend'
+      get 'recommend', action: 'recommend'
+      post 'recommend', action: 'recommended'
     end
   end
 
