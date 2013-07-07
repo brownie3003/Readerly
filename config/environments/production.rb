@@ -1,6 +1,8 @@
 Readerly::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # This has to be changed to fit the domain so book_url(:id) has root url
+  Rails.application.routes.default_url_options[:host] = 'readerly.herokuapp.com'
   # Code is not reloaded between requests.
   config.cache_classes = true
 

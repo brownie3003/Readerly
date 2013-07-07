@@ -84,10 +84,14 @@ hr {
 
 
 /* Book */
+.holder {
+	margin: 0 auto;
+	width: 680px;
+}
+
 .book-content {
 	float: left;
     padding: 10px;
-    width: 70%;
     text-align: justify;
     h2 {
     	text-align: center;
@@ -101,7 +105,8 @@ hr {
 }
 
 .sidebar-wrapper {
-	float: right;
+	float: left;
+	margin-right: -680px;
     padding: 10px;
     width: 20%;
     white-space: normal;
