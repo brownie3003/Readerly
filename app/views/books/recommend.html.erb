@@ -1,12 +1,18 @@
 <div class="recommendation">
-	<%= form_tag("/books/#{params[:id]}/recommend") do %>
-		Name:<%= text_field_tag 'name' %>
-		Email:<%= email_field_tag 'userEmail', nil, placeholder: "Provide your email address" %>
-		Recommend to:<%= text_field_tag 'emails', nil, placeholder: "Enter emails separate by ," %>
-		<%= submit_tag 'Recommend' %>
-	<% end %>
+	<div class="form">
+		<%= form_tag("/books/#{params[:id]}/recommend") do %>
+			
+			<%= label_tag :name, "Your Name" %>
+			<%= text_field_tag 'name' %>
+			
+			<%= label_tag :email, "Your Email" %>
+			<%= email_field_tag 'userEmail', nil, placeholder: "Provide your email address" %>
 
-	<%= mail_to "", "Recommend", bcc: "recommend@readerly.io", subject: "Check out #{@book.title} by #{@book.author}", body: "Hi, \n\n I'm currently reading #{@book.title} on http://www.readerly.io.", class: "btn btn-primary" %>
+			<%= label_tag :emails, "Friends Emails" %>
+			<%= text_field_tag 'emails', nil, placeholder: "Enter at least two emails separated by a comma (,)" %>	
+	</div>
+			<%= submit_tag 'Recommend', class: "btn btn-primary" %>
+		<% end %>
 	<%= link_to "Return to Book", book_path, class: "btn btn-primary" %>
 
 
