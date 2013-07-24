@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
 
   def malice
   end
+
+  def gonegirl
+  end
 end

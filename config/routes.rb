@@ -12,6 +12,8 @@ Readerly::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
+  match '/buymalice', to: 'static_pages#malice', via: 'get'
+  match '/buygonegirl', to: 'static_pages#gonegirl', via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

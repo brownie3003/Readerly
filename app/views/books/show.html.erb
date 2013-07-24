@@ -1,5 +1,4 @@
 <div class="holder">
-
 	<div class="book-content">
 	    <%= @book.chapters.html_safe %>
 	    <hr>
@@ -12,10 +11,7 @@
 	<div class="sidebar-wrapper">
 	    <div class="sidebar">
 	    	<h4> You are reading <%= @book.title %> by <%= @book.author %> </h4>
-	    	<%= link_to "Recommend", recommend_book_path, class: "btn btn-primary" %>
-        	<%= link_to "Download PDF", '#', class: "btn btn-primary" %>
-        	<%= link_to "Buy", '#', class: "btn btn-warning" %>
-        	
+	    	<%= link_to "Recommend & Buy for 99p", recommend_book_path, class: "btn btn-primary" %>
     	</div>
 	</div>
 </div>
