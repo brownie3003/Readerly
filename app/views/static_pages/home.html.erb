@@ -39,13 +39,11 @@
                <div class="span4">
                    <%= image_tag('malice.jpg', class: "bookcover") %>
                </div>
-               <div class="span8">
-                    <p class="synopsis">
-                        <%= @books.find(2).synopsis %>
-                    </p>
+               <div class="span8 synopsis">
+                    <%= @books.find(2).synopsis %>
                 </div>
             </div>
-            <div>
+            <div id="samplebutton">
                 <%= link_to "Read Sample", book_path(@books.find(2)), class: "btn" %>
             </div>
         </div>

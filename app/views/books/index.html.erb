@@ -1,25 +1,31 @@
-<h1>Listing books</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>
+<div class="row-fluid">
+    <div class="span4 offset2">
+        <h2 align="Center"><%= @books.find(1).title %></h2>
+        <div class="row-fluid">
+            <div class="span4">
+                <%= image_tag('GG.jpg', class: "bookcover") %>
+            </div>
+            <div class="span8 synopsis">
+                <%= @books.find(1).synopsis.html_safe %>
+            </div>
+        </div>
+        <div style="padding-top: 10px;">
+            <%= link_to "Read Sample", book_path(@books.find(1)), class: "btn" %>
+        </div>
+    </div>
+    <div class="span4">
+       <h2 align="Center"><%= @books.find(2).title %></h2>
+       <div class="row-fluid">
+           <div class="span4">
+               <%= image_tag('malice.jpg', class: "bookcover") %>
+           </div>
+           <div class="span8 synopsis">
+                <%= @books.find(2).synopsis %>
+            </div>
+        </div>
+        <div id="samplebutton">
+            <%= link_to "Read Sample", book_path(@books.find(2)), class: "btn" %>
+        </div>
+    </div>
+</div> 
