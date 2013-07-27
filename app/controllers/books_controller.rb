@@ -47,6 +47,7 @@ class BooksController < ApplicationController
   # POST /books/:id/recommend
   def recommended
     RecommendMailer.recommendation_email(params).deliver
+    RecommendMailer.discount_email(params).deliver
   end
 
   private

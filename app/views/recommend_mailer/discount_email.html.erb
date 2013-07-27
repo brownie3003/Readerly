@@ -1,0 +1,12 @@
+
+
+Hello <%= @name %>,
+<br>
+<p>Thanks for making recommending <%= @book.title %> through Readerly. You can now purchase and download this book for 99p </p>
+<br>
+<p>Please follow this link for the download: <%= link_to "Buy #{@book.title}", @buylink %></p>
+<br>
+Thanks,
+<br>
+<br>
+Readerly Team

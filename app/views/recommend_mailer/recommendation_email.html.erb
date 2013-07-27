@@ -1,12 +1,12 @@
-Hi,
-</br>
-</br>
-<%= @name %> has just discovered <%= @book.title %> on <a href="http://readerly.herokuapp.com">Readerly</a>. They wanted to recommend the book to you.
+Hello,
+<br>
+<p><%= @name %> has just discovered <%= @book.title %> on <a href="http://readerly.herokuapp.com">Readerly</a> and wanted to recommend the book to you.</p>
 
-Start reading a sample here <%= link_to "#{@book.title}", book_url(@book) %>
+<p>Start reading a sample here <%= link_to "#{@book.title}", book_url(@book) %></p>
 
-Through Readerly you can buy the ebook of <%= @book.title %> for 99p when you recommend it to others.
+<p>Through Readerly you can buy <%= @book.title %> for 99p when you recommend it to others.</p>
 
 Regards,
-
+<br>
+<br>
 Readerly team
