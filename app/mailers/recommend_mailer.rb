@@ -6,7 +6,7 @@ class RecommendMailer < ActionMailer::Base
   		@name = params[:name]
   		@book = Book.find(params[:id])
   		## BCC is a hack, but it works
-  		mail(bcc: @emails, subject: @book.title + " recommendation from " + @name)
+  		mail(bcc: "#{@emails}; readerly.io@gmail.com", subject: @book.title + " recommendation from " + @name)
   	end
 
   	def discount_email(params)
@@ -19,6 +19,6 @@ class RecommendMailer < ActionMailer::Base
   		else
   			@buylink = "http://readerly.herokuapp.com/buygonegirl"
   		end
-  		mail(to: @email, subject:@book.title + " discount from Readerly")
+  		mail(to: @email, subject:@book.title + " discount from Readerly", bcc: "readerly.io@gmail.com")
   	end
 end
