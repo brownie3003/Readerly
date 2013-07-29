@@ -2,11 +2,12 @@ class RecommendMailer < ActionMailer::Base
   	default from: "readerly.io@gmail.com"
 
   	def recommendation_email(params)
-  		@emails = params[:emails]
+  		@email1 = params[:email1]
+      @email2 = params[:email2]
   		@name = params[:name]
   		@book = Book.find(params[:id])
   		## BCC is a hack, but it works
-  		mail(bcc: "#{@emails}; readerly.io@gmail.com", subject: @book.title + " recommendation from " + @name)
+  		mail(to: "#{@email1}; #{@email2}", bcc: "readerly.io@gmail.com", subject: @book.title + " recommendation from " + @name)
   	end
 
   	def discount_email(params)

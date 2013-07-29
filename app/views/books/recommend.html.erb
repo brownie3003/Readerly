@@ -1,5 +1,6 @@
 <div class="recommendation">
 	<div class="form">
+	<p>Please enter your name, email and the email address of two people you would like to recommend <strong><%= @book.title %></strong> to.</p>
 		<%= form_tag("/books/#{params[:id]}/recommend") do %>
 			
 			<%= label_tag :name, "Your Name" %>
@@ -8,8 +9,10 @@
 			<%= label_tag :email, "Your Email" %>
 			<%= email_field_tag 'email', nil, placeholder: "Provide your email address" %>
 
-			<%= label_tag :emails, "Friends Emails" %>
-			<%= text_field_tag 'emails', nil, placeholder: "Enter at least two emails separated by a comma (,)" %>	
+			<%= label_tag :email1, "Friends Emails" %>
+			<%= email_field_tag 'email2', nil, placeholder: "Enter first email" %>
+
+			<%= email_field_tag 'email2', nil, placeholder: "Enter second email" %>
 	</div>
 			<%= submit_tag 'Recommend', class: "btn btn-primary" %>
 		<% end %>
